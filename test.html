@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blog-item{
+            width: 300px;
+            height: 570px;
+            display: block;
+            justify-content: center;
+            background-color: #F8F1DF;
+        }
+        #img-preorder{
+            position: absolute;
+            align-items: center;
+            right: 10px;
+            top: 5px;
+        }
+        .radio-group{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .radio-green.radio-black.radio-gold.radio-gray{
+            margin-right: 10px;
+        }
+        /* radio color */
+        .radio-green input[type="radio"]{
+            position: relative;
+            width: 11px;
+            height: 11px;
+            -webkit-appearance: none;
+            background-color: #1d5235;
+            border: 1px solid #707070;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+        }
+        .radio-green input[type="radio"]::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -4px;
+            top: -4px;
+            border: 1px solid rgb(0, 0, 0);
+            opacity: 0;
+            border-radius: 50%;
+        }
+        .radio-green input:checked[type="radio"]::before{
+            opacity: 1;
+        }
+
+        .radio-gray input[type="radio"]{
+            position: relative;
+            width: 11px;
+            height: 11px;
+            -webkit-appearance: none;
+            background-color: #DDDFDE;
+            border: 1px solid #707070;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+        }
+        .radio-gray input[type="radio"]::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -4px;
+            top: -4px;
+            border: 1px solid rgb(0, 0, 0);
+            opacity: 0;
+            border-radius: 50%;
+        }
+        .radio-gray input:checked[type="radio"]::before{
+            opacity: 1;
+        }
+
+        .radio-black input[type="radio"]{
+            position: relative;
+            width: 11px;
+            height: 11px;
+            -webkit-appearance: none;
+            background-color: #4F4F4F;
+            border: 1px solid #707070;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+        }
+        .radio-black input[type="radio"]::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -4px;
+            top: -4px;
+            border: 1px solid rgb(0, 0, 0);
+            opacity: 0;
+            border-radius: 50%;
+        }
+        .radio-black input:checked[type="radio"]::before{
+            opacity: 1;
+        }
+
+        .radio-gold input[type="radio"]{
+            position: relative;
+            width: 11px;
+            height: 11px;
+            -webkit-appearance: none;
+            background-color: #E2D0BA;
+            border: 1px solid #707070;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+        }
+        .radio-gold input[type="radio"]::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -4px;
+            top: -4px;
+            border: 1px solid rgb(0, 0, 0);
+            opacity: 0;
+            border-radius: 50%;
+        }
+        .radio-gold input:checked[type="radio"]::before{
+            opacity: 1;
+        }
+        /* radio color */
+        .blog-detail{
+            display: flex;
+            flex-direction: column;
+            text-align:  center;
+        }
+        .blog-detail{
+            display: flex;
+            flex-direction: column;
+            text-align:  center;
+            align-items: center;
+        }
+        .btn-item{
+            color: #fff;
+            background-color: #8B3A82;
+            border: none;
+            width: 90px;
+            border-radius: 30px;
+            margin-top: 2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="blog-item">
+        <img id="img-preorder" src="images/label_preorder.png" alt="">
+        <img id="myIphoneMax" width="200px"  src="images/iphone-gray.png" alt="">
+
+        <div class="radio-group">
+            <label class="radio-green">
+                <input type="radio" checked name="iPhoneMax" onclick="document.getElementById('myIphoneMax').src='images/iphone-green.png'">
+            </label>
+
+            <label  class="radio-black">
+                <input type="radio" name="iPhoneMax" onclick="document.getElementById('myIphoneMax').src='images/iphone-gray.png'">
+                <span></span>
+            </label>
+
+            <label  class="radio-gray">
+                <input type="radio" name="iPhoneMax" onclick="document.getElementById('myIphoneMax').src='images/iphone-white.png'">
+                <span></span>
+            </label>
+
+            <label class="radio-gold">
+                <input type="radio" name="iPhoneMax"  onclick="document.getElementById('myIphoneMax').src='images/iphone-gold.png'">
+                <span></span>
+            </label>
+         </div>  
+         <div class="blog-detail">
+            <span style="font-family: akrobatSemiBold;">iPhone 12 Max</span>
+            <span style="font-family: DBHeaventCond;">ราคาปกติ XX,XXX.-</span>
+            <span style="font-family: DBHeaventCond;" class="text-muted font-weight-light">เริ่มเพียง XX,XXX.-</span>
+            <button style="font-family: DBHeaventMedCond;" class="btn-item justify-content-center" href="#">สั่งซื้อ</button>
+        </div> 
+
+    </div>
+</body>
+</html>

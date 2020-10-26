@@ -1,3 +1,24 @@
+/* font */
+/* D:\xampp\htdocs\test\fonts\db_heavent_med_cond_v3.2-webfont.woff */
+@font-face {
+    font-family: DBHeaventMedCond;
+    src: url(fonts/db_heavent_med_cond_v3.2-webfont.woff);
+}
+@font-face {
+    font-family: DBHeaventCond;
+    src: url(fonts/db_heavent_cond_v3.2-webfont.woff);
+}
+@font-face {
+    font-family: DBHeaventBoldCond;
+    src: url(fonts/db_heavent_bd_cond_v3.2-webfont.woff);
+}
+@font-face {
+    font-family: akrobatSemiBold;
+    src: url(fonts/akrobat-bold-webfont.woff);
+}
+  
+  
+/* top img */
 .top-img{
     width : 100%;
     height : 500px;
@@ -20,12 +41,25 @@
     width: 300px;
     height: 570px;
     background-color: #F8F1DF;
-    margin: 1rem;
+    margin-right: 10px;
 }
 .blog-item > img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+}
+#img-preorder{
+    position: relative;
+    left: 200px;
+    top: -10px;
+}
+@media (max-width: 992px) {
+    #img-preorder{
+        left: 125px;
+    }
+}
+@media (max-width: 767px) {
+    #img-preorder{
+        left: 200px;
+    }
 }
 .btn-item{
     color: #fff;
@@ -37,59 +71,154 @@
     align-self: center;
     margin-top: 20px;
 }
-.btn-green{
-    background-color: #60695E;
-    border: #707070;
-    width: 10px;
-    height: 10px;
+/* radio */
+.radio-group{
+    display: flex;
+    justify-content: center;
+}
+.radio-green,.radio-black,.radio-gold,.radio-gray{
+    margin-right: 8px;
+}
+/* radio color */
+.radio-green input[type="radio"]{
+    position: relative;
+    width: 11px;
+    height: 11px;
+    -webkit-appearance: none;
+    background-color: #1d5235;
+    border: 1px solid #707070;
     border-radius: 50%;
-    margin-right: 2px;
+    outline: none;
+    cursor: pointer;
+}
+.radio-green input[type="radio"]::before{
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: -4px;
+    top: -4px;
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 0;
+    border-radius: 50%;
+}
+.radio-green input:checked[type="radio"]::before{
+    opacity: 1;
 }
 
-.btn-gray{
+.radio-gray input[type="radio"]{
+    position: relative;
+    width: 11px;
+    height: 11px;
+    -webkit-appearance: none;
     background-color: #DDDFDE;
-    border: #707070;
-    width: 10px;
-    height: 10px;
+    border: 1px solid #707070;
     border-radius: 50%;
-    margin-right: 2px;
+    outline: none;
+    cursor: pointer;
 }
-.btn-black{
-    background-color: #4F4F4F;
-    border: #707070;
-    width: 10px;
-    height: 10px;
+.radio-gray input[type="radio"]::before{
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: -4px;
+    top: -4px;
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 0;
     border-radius: 50%;
-    margin-right: 2px;
 }
-.btn-gold{
-    background-color: #E2D0BA;
-    border: #707070;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 2px;
+.radio-gray input:checked[type="radio"]::before{
+    opacity: 1;
 }
 
+.radio-black input[type="radio"]{
+    position: relative;
+    width: 11px;
+    height: 11px;
+    -webkit-appearance: none;
+    background-color: #4F4F4F;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+.radio-black input[type="radio"]::before{
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: -4px;
+    top: -4px;
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 0;
+    border-radius: 50%;
+}
+.radio-black input:checked[type="radio"]::before{
+    opacity: 1;
+}
+
+.radio-gold input[type="radio"]{
+    position: relative;
+    width: 11px;
+    height: 11px;
+    -webkit-appearance: none;
+    background-color: #E2D0BA;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+.radio-gold input[type="radio"]::before{
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: -4px;
+    top: -4px;
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 0;
+    border-radius: 50%;
+}
+.radio-gold input:checked[type="radio"]::before{
+    opacity: 1;
+}
+/* radio color */
 
 /* footer */
 .footer{
+
+    font-family: DBHeaventMedCond;
     background-color: #F2F2F2;
     width: 100%;
-    height: 900px;
-    text-align: center;
+    height: 935px;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
     /* padding-top: 10%; */
 }
-section.footer > img{
+.footer > img{
+    position: relative;
+    top: 50%;
     max-width: 100%;
-    padding-top: 25%;
+    /* padding-top: 25%; */
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+.footer > p{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    /* max-width: 100%; */
+    /* padding-top: 25%; */
+    /* display: block; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
 @media (max-width: 745px) {
     .footer{
-        height: 700px;
+        height: 935px;
     }
     #youtube{
         padding-top: 50%;
